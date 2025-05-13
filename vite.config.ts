@@ -3,15 +3,16 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import dts from 'vite-plugin-dts';
 import { peerDependencies, dependencies } from './package.json';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    tailwindcss(),
     dts({
       insertTypesEntry: true,
       include: ['lib/**/*.{ts,tsx}'],
-      exclude: ['**/__tests__/**', '**/*.test.{ts,tsx}'],
     }),
   ],
   build: {
