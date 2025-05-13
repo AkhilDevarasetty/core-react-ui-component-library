@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "rootDir": "lib",
+    "outDir": "dist", // keep d.ts next to JS bundles
+    "noEmit": false // 🚫 override the inherited flag
+  },
+  "include": ["lib"]
+}
