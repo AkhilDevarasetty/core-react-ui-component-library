@@ -4,5 +4,5 @@ export interface TooltipProps{
     children?:ReactNode
     toolTipTitle:string
     toolTipDescription:string
-    closeToolTip:()=>void
+    closeToolTip?:()=>void
 }
