@@ -1,4 +1,4 @@
-import { Button, Banner, Tooltip, ToastPopUp } from '@lib/components';
+import { Button, Banner, Tooltip, ToastPopUp, Badge } from '@lib/components';
 import { BiInfoCircle } from 'react-icons/bi';
 import { ComponentDemo } from './types';
 
@@ -280,6 +280,51 @@ export const componentDemos: ComponentDemo[] = [
   type="info"
   position="bottom-left"
 />`
+      }
+    ]
+  },
+  {
+    name: 'Badge',
+    description: 'Badges to highlight information or status.',
+    category: 'Data Display',
+    examples: [
+      {
+        title: 'Square Badge',
+        description: 'A square badge with different colors.',
+        component: (
+          <div className="flex flex-wrap gap-2">
+            <Badge badgeTitle="Gray" badgeType="square" badgeColor="gray" />
+            <Badge badgeTitle="Red" badgeType="square" badgeColor="red" />
+            <Badge badgeTitle="Yellow" badgeType="square" badgeColor="yellow" />
+            <Badge badgeTitle="Green" badgeType="square" badgeColor="green" />
+            <Badge badgeTitle="Blue" badgeType="square" badgeColor="blue" />
+            <Badge badgeTitle="Indigo" badgeType="square" badgeColor="indigo" />
+            <Badge badgeTitle="Purple" badgeType="square" badgeColor="purple" />
+            <Badge badgeTitle="Pink" badgeType="square" badgeColor="pink" />
+          </div>
+        ),
+        code: `<Badge badgeTitle="Gray" badgeType="square" badgeColor="gray" />
+<Badge badgeTitle="Red" badgeType="square" badgeColor="red" />
+...and so on for all colors`
+      },
+      {
+        title: 'Pill Badge',
+        description: 'A pill-shaped badge with different colors.',
+        component: (
+          <div className="flex flex-wrap gap-2">
+            <Badge badgeTitle="Gray" badgeType="pill" badgeColor="gray" />
+            <Badge badgeTitle="Red" badgeType="pill" badgeColor="red" />
+            <Badge badgeTitle="Yellow" badgeType="pill" badgeColor="yellow" />
+            <Badge badgeTitle="Green" badgeType="pill" badgeColor="green" />
+            <Badge badgeTitle="Blue" badgeType="pill" badgeColor="blue" />
+            <Badge badgeTitle="Indigo" badgeType="pill" badgeColor="indigo" />
+            <Badge badgeTitle="Purple" badgeType="pill" badgeColor="purple" />
+            <Badge badgeTitle="Pink" badgeType="pill" badgeColor="pink" />
+          </div>
+        ),
+        code: `<Badge badgeTitle="Gray" badgeType="pill" badgeColor="gray" />
+<Badge badgeTitle="Red" badgeType="pill" badgeColor="red" />
+...and so on for all colors`
       }
     ]
   }

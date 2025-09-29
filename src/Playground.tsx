@@ -13,6 +13,7 @@ const Playground = () => {
     'Form Elements': true,
     'Feedback': true,
     'Layout': true,
+    'Data Display': true,
   });
 
   const copyToClipboard = (code: string, id: string) => {
