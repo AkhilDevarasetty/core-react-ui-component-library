@@ -1,11 +1,12 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "./tsconfig.app.json",
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": true,
     "rootDir": "lib",
-    "outDir": "dist", // keep d.ts next to JS bundles
-    "noEmit": false // 🚫 override the inherited flag
+    "outDir": "dist",
+    "noEmit": false,
+    "moduleResolution": "bundler"
   },
   "include": ["lib"]
 }

@@ -19,8 +19,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "build:lib": "tsc && vite build",
+    "build": "vite build --mode app",
+    "build:lib": "tsc -p tsconfig-build.json && vite build --mode lib",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "preview": "vite preview",
