@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AkhilDevarasetty/core-react-ui-component-library"
+    "url": "git+https://github.com/AkhilDevarasetty/core-react-ui-component-library.git"
   },
   "main": "./dist/core-react-ui-component-library.umd.js",
   "module": "./dist/core-react-ui-component-library.es.js",
