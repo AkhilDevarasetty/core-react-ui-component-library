@@ -1,54 +1,121 @@
-# React + TypeScript + Vite
+# @akhil_dev/core-react-ui-component-library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern, lightweight React UI component library built with TypeScript and styled with Tailwind CSS.
 
-Currently, two official plugins are available:
+[![npm version](https://img.shields.io/npm/v/@akhil_dev/core-react-ui-component-library.svg)](https://www.npmjs.com/package/@akhil_dev/core-react-ui-component-library)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Installation
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install @akhil_dev/core-react-ui-component-library
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Or with yarn:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+yarn add @akhil_dev/core-react-ui-component-library
 ```
+
+## 🚀 Quick Start
+
+```jsx
+import { Button, Badge, Banner, Tooltip, ToastPopUp } from '@akhil_dev/core-react-ui-component-library';
+
+function App() {
+  return (
+    <div>
+      <Button label="Click me!" onClick={() => alert('Hello!')} />
+      <Badge badgeTitle="New" badgeColor="blue" badgeType="squared" />
+      <Banner variant="success" title="Success!" description="Operation completed successfully." />
+    </div>
+  );
+}
+```
+
+## 📚 Components
+
+This library includes a growing collection of reusable React components:
+
+- **Button** - Customizable button component with various styles
+- **Badge** - Display status, labels, or counts with squared or pill variants
+- **Banner** - Alert/notification banners with success, error, info, and warning variants
+- **Tooltip** - Hoverable tooltips for additional information
+- **ToastPopUp** - Toast notifications with customizable positioning
+
+## 🛠️ Tech Stack
+
+- **React 18** - Modern React with hooks
+- **TypeScript** - Type-safe components
+- **Tailwind CSS** - Utility-first styling
+- **Vite** - Fast build tooling
+- **React Icons** - Beautiful icon library
+
+## 💡 Usage Examples
+
+### Button Component
+
+```jsx
+import { Button } from '@akhil_dev/core-react-ui-component-library';
+
+<Button 
+  label="Submit" 
+  onClick={handleSubmit}
+  type="submit"
+  className="custom-class"
+/>
+```
+
+### Badge Component
+
+```jsx
+import { Badge } from '@akhil_dev/core-react-ui-component-library';
+
+<Badge 
+  badgeTitle="Beta" 
+  badgeColor="purple" 
+  badgeType="pill"
+/>
+```
+
+### Banner Component
+
+```jsx
+import { Banner } from '@akhil_dev/core-react-ui-component-library';
+
+<Banner 
+  variant="error"
+  title="Error Occurred"
+  description="Please check your input and try again."
+  showIcon={true}
+/>
+```
+
+## 🎯 Project Goals
+
+This project was created to:
+
+1. **Portfolio Showcase** - Demonstrate modern React development skills
+2. **Learn Component Design** - Master creating reusable, composable UI components
+3. **Understand npm Publishing** - Learn the full lifecycle of publishing packages
+4. **Deep Dive into React** - Strengthen React fundamentals through practical application
+
+
+## 📝 License
+
+This project is MIT licensed.
+
+## 👤 Author
+
+**Akhil Devarasetty** (akhil_dev)
+
+- GitHub: [@AkhilDevarasetty](https://github.com/AkhilDevarasetty)
+- npm: [@akhil_dev](https://www.npmjs.com/~akhil_dev)
+
+## 🙏 Acknowledgments
+
+Built as a learning project to explore React component architecture and npm package distribution.
+
+---
+
+Made with ❤️ and React

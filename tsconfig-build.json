@@ -6,7 +6,7 @@
     "rootDir": "lib",
     "outDir": "dist",
     "noEmit": false,
-    "moduleResolution": "bundler"
+    "skipLibCheck": true
   },
   "include": ["lib"]
 }

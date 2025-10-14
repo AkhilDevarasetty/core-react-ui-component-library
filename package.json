@@ -1,11 +1,28 @@
 {
-  "name": "core-react-ui-component-library",
+  "name": "@akhil_dev/core-react-ui-component-library",
   "private": false,
   "version": "0.0.1",
   "type": "module",
   "files": [
     "dist"
   ],
+  "description": "A modern React UI component library built with TypeScript and Tailwind CSS",
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "tailwind",
+    "typescript"
+  ],
+  "author": "akhil_dev",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkhilDevarasetty/core-react-ui-component-library"
+  },
   "main": "./dist/core-react-ui-component-library.umd.js",
   "module": "./dist/core-react-ui-component-library.es.js",
   "types": "./dist/index.d.ts",
@@ -27,13 +44,10 @@
     "prepublishOnly": "npm run build:lib"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
