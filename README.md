@@ -17,9 +17,26 @@ Or with yarn:
 yarn add @akhil_dev/core-react-ui-component-library
 ```
 
+## ⚠️ Required: Import Styles
+
+**You must import the stylesheet for the components to render correctly:**
+
+```tsx
+// Add this import to your main entry file (main.tsx, App.tsx, or index.tsx)
+import '@akhil_dev/core-react-ui-component-library/styles.css';
+```
+
+This CSS file contains all the Tailwind styles needed for the components. Without it, the components will appear unstyled.
+
 ## 🚀 Quick Start
 
+**Important:** You must import the CSS file for components to display correctly.
+
 ```jsx
+// 1. Import the CSS file first (in your main.tsx or App.tsx)
+import '@akhil_dev/core-react-ui-component-library/styles.css';
+
+// 2. Import and use components
 import { Button, Badge, Banner, Tooltip, ToastPopUp } from '@akhil_dev/core-react-ui-component-library';
 
 function App() {
@@ -52,6 +69,8 @@ This library includes a growing collection of reusable React components:
 - **React Icons** - Beautiful icon library
 
 ## 💡 Usage Examples
+
+**Note:** Make sure you've imported the CSS file first (see above).
 
 ### Button Component
 

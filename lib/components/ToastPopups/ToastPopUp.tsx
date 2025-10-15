@@ -1,7 +1,7 @@
 import { ToastPopUpProps } from '@lib/types/ToastPopUpProps';
 import { BsCheckCircle, BsXCircle, BsInfoCircle, BsExclamationTriangle } from 'react-icons/bs';
 
-const ToastPopUp = ({ title, message, position, type }: ToastPopUpProps) => {
+export const ToastPopUp = ({ title, message, position, type }: ToastPopUpProps) => {
   const positionClass = {
     'top-left': 'top-0 left-0',
     'top-right': 'top-0 right-0',

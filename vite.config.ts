@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import dts from 'vite-plugin-dts';
 import { peerDependencies, dependencies } from './package.json';
-import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -12,12 +11,12 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
-      tailwindcss(),
       ...(isLibMode
         ? [
             dts({
               insertTypesEntry: true,
               include: ['lib/**/*.{ts,tsx}'],
+              tsconfigPath: './tsconfig-build.json',
             }),
           ]
         : []),
@@ -49,12 +48,16 @@ export default defineConfig(({ mode }) => {
                 react: 'React',
                 'react-dom': 'ReactDOM',
               },
+              assetFileNames: (assetInfo) => {
+                if (assetInfo.name === 'style.css') return 'styles.css';
+                return assetInfo.name || 'assets/[name][extname]';
+              },
             },
           },
           outDir: 'dist',
           sourcemap: false,
-          // Don't minify for better readability
           minify: false,
+          cssCodeSplit: false,
         }
       : {
           // App build configuration

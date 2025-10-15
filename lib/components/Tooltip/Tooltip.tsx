@@ -4,7 +4,7 @@ import TooltipDisplay from './TootltipDisplay';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
-const Tooltip = ({ children, toolTipTitle, toolTipDescription }: TooltipProps) => {
+export const Tooltip = ({ children, toolTipTitle, toolTipDescription }: TooltipProps) => {
   const { isShow, handleToggle } = useToggle();
   const triggerRef = useRef<HTMLDivElement | null>(null);
   const tooltipRef = useRef<HTMLDivElement | null>(null);

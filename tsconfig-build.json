@@ -5,8 +5,9 @@
     "emitDeclarationOnly": true,
     "rootDir": "lib",
     "outDir": "dist",
-    "noEmit": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": false,
+    "jsx": "react-jsx"
   },
   "include": ["lib"]
 }

@@ -4,7 +4,7 @@ import { GoXCircleFill } from 'react-icons/go';
 import { HiExclamationTriangle } from 'react-icons/hi2';
 import { PiInfoFill } from 'react-icons/pi';
 
-const Banner = ({ variant, isSingleLine = true, title, subTitle, className }: BannerProps) => {
+export const Banner = ({ variant, isSingleLine = true, title, subTitle, className }: BannerProps) => {
   const variantClasses = {
     success: 'bg-emerald-50 text-emerald-800 border-emerald-400',
     error: 'bg-red-50 text-red-800 border-red-400',
@@ -60,12 +60,12 @@ const Banner = ({ variant, isSingleLine = true, title, subTitle, className }: Ba
         <div>{renderedIcon}</div>
         <div className="flex flex-col gap-2">
           <h2
-            className={`text-sm leading-5 font-medium text-${variant ? titleClass[variant] : ''}`}
+            className={`text-sm leading-5 font-medium ${variant ? titleClass[variant] : ''}`}
           >
             {title}
           </h2>
           <p
-            className={`text-sm leading-5 font-normal text-${variant ? subTitleClass[variant] : ''}`}
+            className={`text-sm leading-5 font-normal ${variant ? subTitleClass[variant] : ''}`}
           >
             {subTitle}
           </p>
